@@ -72,7 +72,7 @@ namespace prjDemo.Models
 
             modelBuilder.Entity<TProduct>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.FId);
 
                 entity.ToTable("tProduct");
 
@@ -101,7 +101,7 @@ namespace prjDemo.Models
 
             modelBuilder.Entity<TTransaction>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.FId);
 
                 entity.ToTable("tTransaction");
 

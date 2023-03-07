@@ -65,7 +65,7 @@ namespace prjDemo.Controllers
             return RedirectToAction("List");
         }
 
-        public IActionResult Edit(int? id)
+        public ActionResult Edit(int? id)
         {
             dbDemoContext db = new dbDemoContext();
             TProduct prod = db.TProducts.FirstOrDefault(t => t.FId == id);
