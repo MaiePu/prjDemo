@@ -82,13 +82,6 @@ namespace prjDemo.Controllers
             TProduct prod = db.TProducts.FirstOrDefault(t => t.FId == vm.FId);
             if (prod != null)
             {
-                if (vm.photo != null)
-                {
-                    string phootoName = Guid.NewGuid().ToString() + ".jpg";
-                    string path = _eviroment.WebRootPath + "/image/" + phootoName;
-                    prod.FPhotoPath = phootoName;
-                    vm.photo.CopyTo(new FileStream(path, FileMode.Create));
-                }
 
                 prod.FName = vm.FName;
                 prod.FQty = vm.FQty;
